@@ -1,3 +1,7 @@
+selinux_state "SELinux Permissive" do
+    action :permissive
+end
+
 execute 'yum update -y'
 
 package ["vim", "wget", "curl", "epel-release"]
