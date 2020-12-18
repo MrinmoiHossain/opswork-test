@@ -1,7 +1,7 @@
 #Install Nginx
 yum_repository 'nginx' do
   description  'Nginx.org Repository'
-  baseurl      "https://nginx.org/packages/centos/$releasever/$basearch/"
+  baseurl      'https://nginx.org/packages/centos/$releasever/$basearch/'
   action       :create
 end
 
