@@ -1,3 +1,5 @@
+execute 'yum update -y'
+
 package ["vim", "wget", "curl", "epel-release"]
 
 rpm_package "nginx" do
