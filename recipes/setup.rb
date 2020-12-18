@@ -4,4 +4,4 @@ end
 
 package ["vim", "unzip"]
 
-package 'nginx' 
+package ["nginx"] 
