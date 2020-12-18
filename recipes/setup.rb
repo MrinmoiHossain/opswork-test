@@ -5,7 +5,6 @@ yum_repository 'nginx' do
   action       :create
 end
 
-execute "yum update -y"
 
 package ["vim", "wget", "curl", "epel-release"]
 
