@@ -1,8 +1,8 @@
 #Install Nginx
 yum_repository 'nginx' do
   description  'Nginx.org Repository'
-  baseurl      'https://nginx.org/packages/centos/$releasever/$basearch/'
-  gpgkey       'https://nginx.org/keys/nginx_signing.key' 
+  baseurl      node['scribe']['nginx']['upstream_repository']
+  gpgkey       node['scribe']['nginx']['repo_signing_key']
   action       :create
 end
 
@@ -10,6 +10,6 @@ end
 package ["vim", "wget", "curl", "epel-release"]
 
 package 'nginx' do
-  version '1.18.0-1.el7.ngx'
+  version node['scribe']['nginx']['version']
   action :install
 end
